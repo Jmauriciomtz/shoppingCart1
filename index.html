@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Add jQuery through CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/application.js"></script>
+
+    <!-- Add Bootstrap through CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="css/custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-left my-4">Shopping Cart</h1>
+      <div class="row">
+        <div class="col-12">
+
+          <!-- table -->
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Cost ($)</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total ($)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="name">Salmon</td>
+                <td class="cost"><input type="number" value="60"/></td>
+                <td class="quantity"><input type="number" value="1"/></td>
+                <td class="total"></td>
+                <td><button class="btn btn-danger btn-sm cancel">Delete</button></td>
+              </tr>
+              <tr>
+                <td class="name">Tuna</td>
+                <td class="cost"><input type="number" value="50"/></td>
+                <td class="quantity"><input type="number" value="3"/></td>
+                <td class="total"></td>
+                <td><button class="btn btn-danger btn-sm cancel">Delete</button></td>
+              </tr>
+              <tr>
+                <td class="name">Carp</td>
+                <td class="cost"><input type="number" value="40"/></td>
+                <td class="quantity"><input type="number" value="2"/></td>
+                <td class="total"></td>
+                <td><button class="btn btn-danger btn-sm cancel">Delete</button></td>
+              </tr>
+              <tr>
+                <td class="name">Pork</td>
+                <td class="cost"><input type="number" value="50"/></td>
+                <td class="quantity"><input type="number" value="2"/></td>
+                <td class="total"></td>
+                <td><button class="btn btn-danger btn-sm cancel">Delete</button></td>
+              </tr>
+              <tr>
+                <td class="name">Beef</td>
+                <td class="cost"><input type="number" value="40"/></td>
+                <td class="quantity"><input type="number" value="1"/></td>
+                <td class="total"></td>
+                <td><button class="btn btn-danger btn-sm cancel">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Form -->
+        <form class="col-12 mt-2 mb-4" id="addItem">
+          <input class="mx-2" name="name" type="text" placeholder="Name" required/>
+          <input class="mx-2" name="cost" type="number" placeholder="Cost"/>
+          <input class="mx-2" name="quantity" type="number" placeholder="Quantity"/>
+          <button class="btn btn-primary btn-sm">Add</button>
+        </form>
+
+        <div class="col-12">
+          <h3>Total Price: $ <span id="shoppingCartValue"></span></h3>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
